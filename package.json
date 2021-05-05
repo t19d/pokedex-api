@@ -1,0 +1,19 @@
+{
+    "name": "pokedex-api",
+    "version": "1.0.0",
+    "description": "Pokédex",
+    "main": "main.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "electron ."
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "electron": "^12.0.6"
+    },
+    "dependencies": {
+        "axios": "^0.21.1"
+    }
+}
