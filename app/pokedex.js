@@ -19,7 +19,8 @@ const Pokedex = {
     },
     async getPokemonName(name_pokemon) {
         const { data } = await axios.get(baseURL + '/pokemon/' + name_pokemon + '/');
-        console.log(data);
+        ///console.log(data);
+        return data;
     }
 };
 
