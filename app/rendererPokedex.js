@@ -9,7 +9,8 @@ const renderPokemon = async() => {
         var htmlList = "";
         var allPokemon = await pokedex.getAllPokemon();
         for (let i = 0; i < allPokemon.count; i++) {
-            htmlList += `<li><a href="pokemon.html">${allPokemon.results[i].name}</a></li>`;
+            //htmlList += `<li><a href="pokemon.html">${allPokemon.results[i].name}</a></li>`;
+            htmlList += `<li><a href="pokemon.html?name=${allPokemon.results[i].name}">${allPokemon.results[i].name}</a></li>`;
             //htmlList += `<li><a href="${allPokemon.results[i].url}">${allPokemon.results[i].name}</a></li>`;
         }
         listPokemon.innerHTML = htmlList;
