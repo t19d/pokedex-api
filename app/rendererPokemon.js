@@ -14,7 +14,10 @@ const statSpeedPokemon = document.querySelector('#stat-speed-Pokemon');
 
 const renderPokemon = async() => {
     try {
-        var currentPokemon = await pokedex.getPokemonName("empoleon");
+        // Get Pokemon's name
+        const pokemonNameURL = window.location.search.split("=")[1];
+        // Get data
+        var currentPokemon = await pokedex.getPokemonName(pokemonNameURL);
         console.log(currentPokemon);
         // NAME
         namePokemon.innerHTML = currentPokemon.name.toUpperCase();
