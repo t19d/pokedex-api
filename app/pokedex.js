@@ -13,9 +13,13 @@ const Pokedex = {
         //console.log(data.results);
         return data;
     },
-    async getPokemon(num_pokemon) {
+    async getPokemonNum(num_pokemon) {
         const { data } = await axios.get(baseURL + '/pokemon/' + num_pokemon + '/');
         //console.log(data);
+    },
+    async getPokemonName(name_pokemon) {
+        const { data } = await axios.get(baseURL + '/pokemon/' + name_pokemon + '/');
+        console.log(data);
     }
 };
 
