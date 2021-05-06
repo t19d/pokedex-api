@@ -1,0 +1,11 @@
+#stats-Pokemon {
+    border-collapse: collapse;
+    border: 1px solid black;
+}
+
+#stats-Pokemon th,
+#stats-Pokemon td {
+    border: 1px solid black;
+    padding: 1rem;
+    text-align: center;
+}
