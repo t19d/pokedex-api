@@ -1,5 +1,4 @@
-const pokedex = require('./pokedex')
-console.log('hello');
+const pokedex = require('./pokedex');
 
 //DOM elements
 const listPokemon = document.querySelector('#list-pokemon');
