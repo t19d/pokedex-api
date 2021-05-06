@@ -1,16 +1,22 @@
-const { app, BrowserWindow } = require('electron')
-const path = require('path')
+const { app, BrowserWindow } = require('electron');
+const path = require('path');
+
+let win = null;
 
 function createWindow() {
-    const win = new BrowserWindow({
+    win = new BrowserWindow({
         width: 800,
         height: 600,
         webPreferences: {
+            nodeIntegration: true,
+            nodeIntegrationInSubFrames: true,
+            nodeIntegrationInWorker: true,
+            contextIsolation: false, // If put this, nodeIntegration works
             preload: path.join(__dirname, 'preload.js')
         }
-    })
+    });
 
-    win.loadFile('index.html');
+    win.loadFile(__dirname + '/index.html');
 }
 
 app.whenReady().then(() => {
