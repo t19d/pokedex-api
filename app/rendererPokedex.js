@@ -3,19 +3,20 @@ console.log('hello');
 
 //DOM elements
 const listPokemon = document.querySelector('#list-pokemon');
+const errorPokemon = document.querySelector('#error-msg');
 
 const renderPokemon = async() => {
-    var htmlList = "";
     try {
+        var htmlList = "";
         var allPokemon = await pokedex.getAllPokemon();
         for (let i = 0; i < allPokemon.count; i++) {
             htmlList += `<li><a href="pokemon.html">${allPokemon.results[i].name}</a></li>`;
             //htmlList += `<li><a href="${allPokemon.results[i].url}">${allPokemon.results[i].name}</a></li>`;
         }
+        listPokemon.innerHTML = htmlList;
     } catch (e) {
-        htmlList = "<li>ERROR</li>";
+        errorPokemon = "<h2>ERROR</h2>";
     }
-    listPokemon.innerHTML = htmlList;
 }
 
 renderPokemon();
